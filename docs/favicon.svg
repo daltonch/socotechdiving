@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+  <!-- navy background so the cream/cyan mark stays visible on any tab color -->
+  <rect width="36" height="36" rx="8" fill="#0a1929"/>
+  <!-- gauge mark (from .brand-mark), stroke weights bumped for small-size legibility -->
+  <g fill="none">
+    <circle cx="18" cy="18" r="15" stroke="#00d4ff" stroke-width="2"/>
+    <circle cx="18" cy="18" r="10.5" stroke="rgba(245,242,234,0.45)" stroke-width="1.2"/>
+    <line x1="18" y1="6.5" x2="18" y2="9.5" stroke="#f5f2ea" stroke-width="2" stroke-linecap="round"/>
+    <line x1="18" y1="26.5" x2="18" y2="29.5" stroke="#f5f2ea" stroke-width="2" stroke-linecap="round"/>
+    <line x1="6.5" y1="18" x2="9.5" y2="18" stroke="#f5f2ea" stroke-width="2" stroke-linecap="round"/>
+    <line x1="26.5" y1="18" x2="29.5" y2="18" stroke="#f5f2ea" stroke-width="2" stroke-linecap="round"/>
+    <line x1="18" y1="18" x2="24.5" y2="11.5" stroke="#ff6b35" stroke-width="2.6" stroke-linecap="round"/>
+    <circle cx="18" cy="18" r="3" fill="#f5f2ea"/>
+  </g>
+</svg>
