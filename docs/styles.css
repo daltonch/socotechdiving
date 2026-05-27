@@ -463,6 +463,8 @@ section { padding: 56px 0; }
   background: var(--orange);
 }
 
+.band .section-eyebrow::before { background: var(--cyan); }
+
 h2 {
   font-family: var(--display);
   font-weight: 700;
