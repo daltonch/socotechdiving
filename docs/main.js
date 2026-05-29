@@ -1,5 +1,5 @@
 // =====================================
-// SoCoTechDiving — Hero Pressure Gauge
+// SoCoTechDiving - Hero Pressure Gauge
 // =====================================
 
 (function () {
@@ -17,7 +17,7 @@
   const gaugeSvg = document.querySelector(".gauge-svg");
   if (!gaugeSvg) return;
 
-  // Gauge geometry — viewBox 400x400, dial sweeps -135° (left bottom) to +135° (right bottom)
+  // Gauge geometry - viewBox 400x400, dial sweeps -135° (left bottom) to +135° (right bottom)
   const CX = 200, CY = 200, R_OUTER = 188, R_INNER = 144;
   const ARC_START = -135, ARC_END = 135;
 
@@ -126,7 +126,10 @@
 
   let counter = null;
 
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   function animateNumber(from, to, dur, fn) {
+    if (reduceMotion) { fn(to); return; }
     const start = performance.now();
     function step(now) {
       const t = Math.min(1, (now - start) / dur);
@@ -185,11 +188,14 @@
   const order = ["air", "ean32", "ean36", "trimix", "oxygen"];
   let idx = 0;
 
-  // Initial state — kick off after a brief delay so the needle sweeps from zero
-  setTimeout(() => setMix("air"), 200);
+  // Initial state - kick off after a brief delay so the needle sweeps from zero
+  setTimeout(() => setMix("air"), reduceMotion ? 0 : 200);
 
-  counter = setInterval(() => {
-    idx = (idx + 1) % order.length;
-    setMix(order[idx]);
-  }, 3800);
+  // Auto-cycle only when the visitor has not asked for reduced motion
+  if (!reduceMotion) {
+    counter = setInterval(() => {
+      idx = (idx + 1) % order.length;
+      setMix(order[idx]);
+    }, 3800);
+  }
 })();
