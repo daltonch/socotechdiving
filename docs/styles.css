@@ -20,14 +20,14 @@
 
   --ink: #0a1929;
   --slate: #3a4a5e;
-  --slate-2: #6b7a8c;
+  --slate-2: #55637a;
   --border: #ddd8c8;
   --border-2: #c9c3b0;
 
   /* Type */
   --display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
-  --body: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
-  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --body: "Hanken Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, monospace;
 
   /* Layout */
   --container: 1280px;
@@ -180,6 +180,7 @@ button:focus-visible,
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background-image:
     linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
@@ -189,8 +190,19 @@ button:focus-visible,
   pointer-events: none;
 }
 
+/* Cyan depth glow spotlighting the gauge on the right */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: radial-gradient(ellipse 46% 52% at 73% 52%, rgba(0,212,255,0.12), transparent 70%);
+  pointer-events: none;
+}
+
 .hero-inner {
   position: relative;
+  z-index: 1;
   display: grid;
   grid-template-columns: 1.05fr 1fr;
   gap: 64px;
@@ -318,6 +330,20 @@ h1.hero-title em {
   text-transform: uppercase;
   color: rgba(245,242,234,0.55);
   margin-top: 8px;
+}
+
+/* Gauge-scale tick rule: instrument motif closing the hero */
+.hero-scale {
+  position: relative;
+  z-index: 1;
+  height: 16px;
+  background-image:
+    repeating-linear-gradient(90deg, rgba(0,212,255,0.55) 0 2px, transparent 2px 72px),
+    repeating-linear-gradient(90deg, rgba(245,242,234,0.28) 0 1px, transparent 1px 14.4px);
+  background-size: 72px 14px, 14.4px 8px;
+  background-position: left bottom, left bottom;
+  background-repeat: repeat-x, repeat-x;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 
 /* ============ GAUGE WIDGET ============ */
@@ -668,6 +694,15 @@ h2 {
 .svc-feature .svc-desc { color: rgba(245,242,234,0.7); font-size: 16px; max-width: 42ch; }
 .svc-feature .svc-num { color: var(--cyan); }
 
+.svc-feature .svc-spec-chip {
+  background: rgba(0,212,255,0.12);
+  color: var(--cyan);
+}
+
+.svc-feature .svc-price { border-top-color: rgba(255,255,255,0.1); }
+.svc-feature .svc-price-from { color: rgba(245,242,234,0.5); }
+.svc-feature .svc-price-num { color: var(--cream); }
+
 .svc-feature-img {
   background-size: cover;
   background-position: center;
@@ -687,8 +722,11 @@ h2 {
 .band {
   background: var(--navy-900);
   color: var(--cream);
-  padding: 40px 0;
+  padding: 48px 0;
 }
+
+.band h2 { color: var(--cream); }
+.band .section-head { margin-bottom: 44px; }
 
 .band-inner {
   display: grid;

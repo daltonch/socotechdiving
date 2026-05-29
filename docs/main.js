@@ -49,7 +49,7 @@
     if (major) {
       const psi = (i * 500);
       const [lx, ly] = polar(angle, R_OUTER - 38);
-      labels += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="central" fill="rgba(245,242,234,0.55)" font-family="IBM Plex Mono, monospace" font-size="11" letter-spacing="0.05em">${psi}</text>`;
+      labels += `<text x="${lx}" y="${ly}" text-anchor="middle" dominant-baseline="central" fill="rgba(245,242,234,0.55)" font-family="Geist Mono, monospace" font-size="11" letter-spacing="0.05em">${psi}</text>`;
     }
   }
 
@@ -101,7 +101,7 @@
 
     <!-- Brand mark on dial -->
     <text x="${CX}" y="${CY - 70}" text-anchor="middle" fill="rgba(245,242,234,0.4)" font-family="Bricolage Grotesque, sans-serif" font-size="10" letter-spacing="0.3em" font-weight="700">SOCO TECH</text>
-    <text x="${CX}" y="${CY - 56}" text-anchor="middle" fill="rgba(0,212,255,0.6)" font-family="IBM Plex Mono, monospace" font-size="8" letter-spacing="0.2em">PSI · BAR</text>
+    <text x="${CX}" y="${CY - 56}" text-anchor="middle" fill="rgba(0,212,255,0.6)" font-family="Geist Mono, monospace" font-size="8" letter-spacing="0.2em">PSI · BAR</text>
 
     <!-- Needle group (will be rotated via transform on the .gauge-needle) -->
     <g class="gauge-needle" style="transform-origin: ${CX}px ${CY}px; transform: rotate(${ARC_START}deg); transition: transform 1.4s cubic-bezier(0.34, 1.32, 0.45, 1);">

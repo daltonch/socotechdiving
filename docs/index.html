@@ -40,7 +40,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Geist+Mono:wght@400;500;600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 
@@ -81,8 +81,8 @@
     "name": "Dive Fill & Inspection Services",
     "itemListElement": [
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Compressed Air Fills", "description": "Grade-E breathing air fills up to 3442 PSI." }, "priceCurrency": "USD", "price": "10" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nitrox Blending (EAN 22-40%)", "description": "Standard partial-pressure nitrox blends, any size tank." }, "priceCurrency": "USD", "price": "20" },
-      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enriched / High-O2 Blending (41-100%)", "description": "Custom high-oxygen blends, any size tank." }, "priceCurrency": "USD", "price": "40" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Nitrox Blending (EAN 22-40%)", "description": "Standard partial-pressure nitrox blends, any size SCUBA tank." }, "priceCurrency": "USD", "price": "20" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enriched / High-O2 Blending (41-100%)", "description": "Custom high-oxygen blends, any size SCUBA tank." }, "priceCurrency": "USD", "price": "40" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trimix & Heliox Blending", "description": "Custom helium-based blends for cave, wreck and deep diving." }, "priceCurrency": "USD", "price": "40" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pure 100% Oxygen Fills", "description": "Aviator-grade oxygen into O2-clean deco, CCR and bailout cylinders. AL40 or smaller $20, larger $40." }, "priceCurrency": "USD", "price": "20" },
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Visual Inspections (VIP)", "description": "Annual PSI/PCI visual cylinder inspection with sticker and air fill." }, "priceCurrency": "USD", "price": "20" }
@@ -194,6 +194,7 @@
       </div>
     </div>
   </div>
+  <div class="hero-scale" aria-hidden="true"></div>
 </section>
 
 <!-- ============ SERVICES ============ -->
@@ -243,14 +244,14 @@
         <svg class="svc-icon" viewBox="0 0 44 44" fill="none" stroke="#0a1929" stroke-width="1.6" aria-hidden="true">
           <circle cx="22" cy="22" r="16"/>
           <path d="M 8 22 a 14 14 0 0 1 28 0" fill="#ff6b35" fill-opacity="0.85" stroke="none"/>
-          <text x="22" y="16" text-anchor="middle" font-family="IBM Plex Mono" font-size="6" fill="#0a1929" font-weight="600">O₂ 32</text>
-          <text x="22" y="30" text-anchor="middle" font-family="IBM Plex Mono" font-size="6" fill="#0a1929" font-weight="600">N₂ 68</text>
+          <text x="22" y="16" text-anchor="middle" font-family="Geist Mono" font-size="6" fill="#0a1929" font-weight="600">O₂ 32</text>
+          <text x="22" y="30" text-anchor="middle" font-family="Geist Mono" font-size="6" fill="#0a1929" font-weight="600">N₂ 68</text>
         </svg>
         <div class="svc-num">/ 02</div>
         <h3 class="svc-title">Nitrox Blending</h3>
         <p class="svc-desc">
           Partial-pressure blending for EAN 32, 36, or any custom mix from 22% up to 100%.
-          EAN 22-40% is $20, 41-100% is $40, any size tank. Every blend is analyzed by you and us
+          EAN 22-40% is $20, 41-100% is $40, any size SCUBA tank. Every blend is analyzed by you and us
           before it leaves the shop. Bring your analyzer or borrow ours.
         </p>
         <div class="svc-spec">
@@ -276,15 +277,15 @@
               Bring your gas requirements and I'll fill your tank.
             </p>
             <div class="svc-spec">
-              <span class="svc-spec-chip" style="background:rgba(0,212,255,0.12); color:#00d4ff;">Custom He mixes</span>
-              <span class="svc-spec-chip" style="background:rgba(0,212,255,0.12); color:#00d4ff;">Deco gases</span>
-              <span class="svc-spec-chip" style="background:rgba(0,212,255,0.12); color:#00d4ff;">CCR diluent</span>
-              <span class="svc-spec-chip" style="background:rgba(0,212,255,0.12); color:#00d4ff;">Bailout stages</span>
+              <span class="svc-spec-chip">Custom He mixes</span>
+              <span class="svc-spec-chip">Deco gases</span>
+              <span class="svc-spec-chip">CCR diluent</span>
+              <span class="svc-spec-chip">Bailout stages</span>
             </div>
           </div>
-          <div class="svc-price" style="border-top-color: rgba(255,255,255,0.1);">
-            <div class="svc-price-from" style="color: rgba(245,242,234,0.5);"> </div>
-            <div class="svc-price-num" style="color: var(--cream);"><span class="currency">$</span>40 + $3/cu ft for He<small class="svc-price-unit">/ tank</small> </div>
+          <div class="svc-price">
+            <div class="svc-price-from">&nbsp;</div>
+            <div class="svc-price-num"><span class="currency">$</span>40 + $3/cu ft for He<small class="svc-price-unit">/ tank</small> </div>
           </div>
         </div>
         <!-- Visual: stylized gas mix illustration -->
@@ -325,8 +326,8 @@
               <!-- Bands -->
               <rect x="40" y="60" width="60" height="12" fill="rgba(255,255,255,0.1)"/>
               <rect x="40" y="148" width="60" height="12" fill="rgba(255,255,255,0.1)"/>
-              <text x="70" y="120" text-anchor="middle" fill="rgba(245,242,234,0.5)" font-family="IBM Plex Mono" font-size="11" font-weight="600" letter-spacing="0.15em">21/35</text>
-              <text x="70" y="138" text-anchor="middle" fill="rgba(245,242,234,0.35)" font-family="IBM Plex Mono" font-size="7" letter-spacing="0.2em">TRIMIX</text>
+              <text x="70" y="120" text-anchor="middle" fill="rgba(245,242,234,0.5)" font-family="Geist Mono" font-size="11" font-weight="600" letter-spacing="0.15em">21/35</text>
+              <text x="70" y="138" text-anchor="middle" fill="rgba(245,242,234,0.35)" font-family="Geist Mono" font-size="7" letter-spacing="0.2em">TRIMIX</text>
             </g>
           </svg>
         </div>
@@ -336,7 +337,7 @@
       <article class="service-card svc-med">
         <svg class="svc-icon" viewBox="0 0 44 44" fill="none" stroke="#ff6b35" stroke-width="1.6" aria-hidden="true">
           <circle cx="22" cy="22" r="12"/>
-          <text x="22" y="26" text-anchor="middle" font-family="IBM Plex Mono" font-size="11" fill="#ff6b35" font-weight="600">O₂</text>
+          <text x="22" y="26" text-anchor="middle" font-family="Geist Mono" font-size="11" fill="#ff6b35" font-weight="600">O₂</text>
           <circle cx="22" cy="22" r="18" stroke-dasharray="3 4" opacity="0.5"/>
         </svg>
         <div class="svc-num">/ 04</div>
@@ -444,11 +445,11 @@
 </section>
 
 <!-- ============ WHY US BAND ============ -->
-<section class="band" id="why" style="padding: 48px 0;">
+<section class="band" id="why">
   <div class="container">
-    <div class="section-head" style="margin-bottom: 48px;">
+    <div class="section-head">
       <div>
-        <h2 style="color: var(--cream);">A small shop that runs like<br>a serious gas blender.</h2>
+        <h2>A small shop that runs like<br>a serious gas blender.</h2>
       </div>
     </div>
 
