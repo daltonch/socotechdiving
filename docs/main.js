@@ -105,8 +105,8 @@
 
     <!-- Needle group (will be rotated via transform on the .gauge-needle) -->
     <g class="gauge-needle" style="transform-origin: ${CX}px ${CY}px; transform: rotate(${ARC_START}deg); transition: transform 1.4s cubic-bezier(0.34, 1.32, 0.45, 1);">
-      <line x1="${CX}" y1="${CY}" x2="${CX}" y2="${CY - 168}" stroke="#ff6b35" stroke-width="3" stroke-linecap="round" filter="url(#needleGlow)"/>
-      <line x1="${CX}" y1="${CY}" x2="${CX}" y2="${CY + 28}" stroke="#ff6b35" stroke-width="4" stroke-linecap="round" opacity="0.85"/>
+      <line x1="${CX}" y1="${CY}" x2="${CX}" y2="${CY - 168}" stroke="#ff6b35" stroke-width="3" stroke-linecap="round" filter="url(#needleGlow)" style="transition: stroke 0.6s cubic-bezier(0.23, 1, 0.32, 1);"/>
+      <line x1="${CX}" y1="${CY}" x2="${CX}" y2="${CY + 28}" stroke="#ff6b35" stroke-width="4" stroke-linecap="round" opacity="0.85" style="transition: stroke 0.6s cubic-bezier(0.23, 1, 0.32, 1);"/>
     </g>
 
     <!-- Center cap -->
@@ -157,8 +157,8 @@
 
     mixLabel.textContent = m.label;
 
-    // Animate PSI number
-    animateNumber(currentPsi, m.psi, 1200, (v) => {
+    // Animate PSI number (matches the needle's 1.4s settle)
+    animateNumber(currentPsi, m.psi, 1400, (v) => {
       psiOut.textContent = v.toLocaleString();
     });
     currentPsi = m.psi;
